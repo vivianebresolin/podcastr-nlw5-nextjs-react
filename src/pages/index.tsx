@@ -1,5 +1,18 @@
+import { GetStaticProps } from 'next';
+
+type Episode = {
+  id: string,
+  title: string,
+  members: string,
+  // ...
+}
+
+type HomeProps = {
+  episodes: Episode[],
+}
+
 //SSG
-export default function Home(props) {
+export default function Home(props: HomeProps) {
   return (
     <div>
       <h1>Index</h1>
@@ -8,7 +21,7 @@ export default function Home(props) {
   )
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const response = await fetch('http://localhost:3333/episodes');
   const data = await response.json();
 
@@ -16,9 +29,12 @@ export async function getStaticProps() {
     props: {
       episodes: data,
     },
-    revalidate: 60 * 60 * 8, //revalidade - tempo em segundos, serve para dizer a cada quanto tempo se quer que seja gerada uma nova página estática (gera uma nova chamada para a API).
+    revalidate: 60 * 60 * 8, //revalidate - tempo em segundos, serve para dizer a cada quanto tempo se quer que seja gerada uma nova página estática (gera uma nova chamada para a API).
   }                          //nesse exemplo, seria gerada a cada 8 horas  
 }
+
+
+
 
 //SSR
 // export default function Home(props) {
