@@ -1,11 +1,19 @@
 import { GetStaticProps } from 'next';
+import { format, parseISO } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
 import { api } from '../services/api';
+import { convertDurationToTimeString } from '../utils/convertDurationtoTimeString';
 
 type Episode = {
   id: string,
   title: string,
   members: string,
-  // ...
+  published_at: string,
+  thumbnail: string,
+  description: string,
+  url: string,
+  duration: number,
+  durationAsString: string,
 }
 
 type HomeProps = {
@@ -36,14 +44,27 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   });
 
+  const episodes = data.map(episode => {
+    return {
+      id: episode.id,
+      title: episode.title,
+      thumbnail: episode.thumbnail,
+      members: episode.members,
+      published_at: format(parseISO(episode.published_at), 'd MMM yy', { locale: ptBR }),
+      duration: Number(episode.file.duration),
+      durationAsString: convertDurationToTimeString(Number(episode.file.duration)),
+      description: episode.description,
+      url: episode.file.url,
+    }
+  });
+
   return {
     props: {
-      episodes: data,
+      episodes,
     },
     revalidate: 60 * 60 * 8, //revalidate - tempo em segundos, serve para dizer a cada quanto tempo se quer que seja gerada uma nova página estática (gera uma nova chamada para a API).
   }                          //nesse exemplo, seria gerada a cada 8 horas  
 }
-
 
 
 
