@@ -1,34 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Podcastr
 
-## Getting Started
+<div align="center">
 
-First, run the development server:
+  ![Typescript](https://img.shields.io/badge/-Typescript-black?style=flat-square&logo=typescript)
+  ![React](https://img.shields.io/badge/-React-black?style=flat-square&logo=react)
+  ![Next.js](https://img.shields.io/badge/-Next.js-black?style=flat-square&logo=next.js)
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+**Podcastr** is an application developed during the "Next Level Week #5", which is an intensive week, designed to help you take the next step in your evolution as a programmer. It is a free training provided by [Rocketseat](https://github.com/Rocketseat).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project was created with [Next.js](https://nextjs.org/), and is bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<div></div>
+<img src=".github/podcastr.gif" height="500"/>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## :man_technologist: Technologies, tools, and concepts explained/used during the event:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Typescript
+- React
+- NextJS
+- SSR - Server-side rendering
+- SSG - Static site generation
+- SASS
+- Yarn
 
-## Learn More
+## :nerd_face: Ideas to improve this app in the near future:
 
-To learn more about Next.js, take a look at the following resources:
+- Responsivity
+- PWA (Progressive Web App)
+- Electron (desktop version)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Made with 🧡 and :coffee: | Find me on [Linkedin](https://www.linkedin.com/in/vivianebresolin/)
