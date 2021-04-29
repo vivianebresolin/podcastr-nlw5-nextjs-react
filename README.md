@@ -11,8 +11,8 @@
 
 This project was created with [Next.js](https://nextjs.org/), and is bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-<div></div>
-<img src=".github/podcastr.gif" height="500"/>
+
+<img src="https://github.com/vivianebresolin/podcastr-nlw5-with-nextjs-react/blob/main/public/podcastr.gif?raw=true" height="100%"/>
 
 ## :man_technologist: Technologies, tools, and concepts explained/used during the event:
 
@@ -30,4 +30,5 @@ This project was created with [Next.js](https://nextjs.org/), and is bootstrappe
 - PWA (Progressive Web App)
 - Electron (desktop version)
 
-Made with 🧡 and :coffee: | Find me on [Linkedin](https://www.linkedin.com/in/vivianebresolin/)
+<div align="center">Made with 🧡 and :coffee: | Find me on <a href="https://www.linkedin.com/in/vivianebresolin/"> LinkedIn</a></div>
+
